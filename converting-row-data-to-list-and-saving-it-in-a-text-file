@@ -1,0 +1,12 @@
+import pandas as pd
+data = pd.read_csv("file to be read")
+#converting row data into a string
+Row_list =[] 
+for index, rows in data.iterrows():
+    my_list=[data]
+    Row_list.append(my_list)
+print(Row_list)
+#writing to txt file
+with open('new file.txt', 'w') as filehandle:
+    for listitem in Row_list:
+        filehandle.write('%s\n' % listitem)
